@@ -30,12 +30,56 @@
 <body>
     <header>
         <h1>Mark Hampton</h1>
+        <!-- <img> TODO -->
     </header>
     <nav>
-
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="involved.html">Get Involved</a></li>
+            <li><button class="tilted-input">Donate Now</button></li>  <!-- TODO on click in script -->
+        </ul>
     </nav>
     <main>
+        <section id="nextEvent">
+            <!-- <img> TODO -->
+            <p></p> <!-- TODO -->
+            <button class="tilted-input">Join Us</button>
+        </section>
+        <section id="donateIndex">
+            <h2>Donate Now</h2>
+            <p>Make a tax-deductible contribution today!</p>
+            <form>
+                <section id="donateIndexName">
+                    <label for="donateIndexLegalName">Full Legal Name</label>
+                    <input class="tilted-input" id="donateIndexLegalName" name="donateIndexLegalName" type="text">
+                </section>
+                <section id="radioDonateIndex">
+                    <fieldset class="tilted-input">
+                        <input id="monthlyIndex" type="radio" name="monthlyIndex" value="monthly" checked>
+                        <label for="monthlyIndex">Monthly</label>
 
+                        <input id="one-timeIndex" type="radio" name="one-timeIndex" value="one-time">
+                        <label for="one-timeIndex">One-Time</label>
+                    </fieldset>
+                </section>
+                <section id="moneyIndex">
+                    <label for="donationAmount">Desired Amount</label>
+                    <select class="tilted-input" id="donationAmount" name="donationAmount">
+                        <option value="null">Choose Amount</option>
+                        <option value="10">$10</option>
+                        <option value="50">$50</option>
+                        <option value="100">$100</option>
+                        <option value="250">$250</option>
+                        <option value="500">$500</option>
+                        <option value="other">Other</option>
+                    </select>
+                </section>
+                <input class="tilted-input" type="submit" value="Pay" id="indexDonateSubmit">
+            </form>
+        </section>
     </main>
     <footer>
         <section id="newsletter">
@@ -53,6 +97,7 @@
                     <label for="newsletterTel">Phone Number</label>
                     <input class="tilted-input" id="newsletterTel" name="newsletterTel" type="tel" placeholder="(602) 333-3333">
                 </section>
+                <input class="tilted-input" type="submit" value="Subscribe" id="newsletterSubmit">
             </form>
         </section>
     </footer>
