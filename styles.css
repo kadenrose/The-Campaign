@@ -97,6 +97,34 @@ header {
 /* NAV STYLES */
 nav {
     grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 1em; */
+    background-color: var(--sky-blue);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    padding: 1rem 1.3rem;
+    font-family: var(--headers-hero-etc);
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+nav li:hover {
+    background-color: var(--cool-blue-gray);
 }
 
 /* MAIN STYLES */
@@ -107,11 +135,12 @@ main {
 /* FOOTER STYLES */
 footer {
     grid-area: footer;
+    background-color: var(--sky-blue);
 }
 
 /* CLASSES */
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 .hero {
