@@ -1,3 +1,9 @@
 .tilted-input{
     transform: skewX(-20deg);
+    font-family: var(--headers-hero-etc);
 }
+
+.thisIsAHeading {
+    font-family: var(--headers-hero-etc);
+}
+/* MEDIA QUERIES */
