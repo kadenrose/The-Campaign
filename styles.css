@@ -56,7 +56,7 @@ table {
     --background-1: #FAFAFA;
     --background-2: #F1F1F1;
 
-    --deep-red: #7A1F1F;
+    --deep-red: rgb(171, 0, 34);
     --muted-red: #B94747;
     --sky-blue: #A4C8E1;
     --cool-blue-gray: #C8DDE8;
@@ -99,7 +99,6 @@ nav {
     grid-area: nav;
     display: flex;
     justify-content: space-between;
-    /* padding: 1em; */
     background-color: var(--sky-blue);
 }
 
@@ -116,6 +115,11 @@ nav li {
 nav a {
     color: #000000;
     text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav button {
+    font-size: 1.3rem;
 }
 
 nav a:visited {
@@ -123,13 +127,28 @@ nav a:visited {
     color: #000000;
 }
 
-nav li:hover {
+nav li.navItem:hover {
+    background-color: var(--cool-blue-gray);
+}
+
+nav .thisIsAHeading {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+/* class for current page*/
+.active {
     background-color: var(--cool-blue-gray);
 }
 
 /* MAIN STYLES */
 main {
     grid-area: main;
+}
+
+#nextEvent {
+    background-color: var(--deep-red);
+    color: var(--cool-blue-gray);
 }
 
 /* FOOTER STYLES */
