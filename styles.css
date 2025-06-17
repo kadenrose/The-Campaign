@@ -76,9 +76,6 @@ h1, h2, h3, h4 {
 }
 
 body {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
     background-color: var(--background-1);
     display: grid;
     grid-template-columns: 1fr;
@@ -88,6 +85,20 @@ body {
     "main"
     "footer";
 }
+
+button, input{
+    box-shadow: -1px 1px 1px;
+}
+
+button {
+    background-color: var(--deep-red);
+}
+
+button:hover {
+    background-color: var(--muted-red);
+    cursor: pointer;
+}
+
 
 /* HEADER STYLES */
 header {
@@ -100,6 +111,8 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: var(--sky-blue);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 nav ul {
@@ -133,6 +146,9 @@ nav li.navItem:hover {
 
 nav .thisIsAHeading {
     padding: 1rem;
+}
+
+nav .thisIsAHeading a {
     font-size: 2rem;
 }
 
@@ -155,6 +171,8 @@ main {
 footer {
     grid-area: footer;
     background-color: var(--sky-blue);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* CLASSES */
@@ -166,6 +184,7 @@ footer {
     width: 100%;
     height: auto;
 }
+
 
 .tilted-input {
     transform: skewX(-20deg);
