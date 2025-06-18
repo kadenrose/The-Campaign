@@ -99,6 +99,13 @@ button:hover {
     cursor: pointer;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
 
 /* HEADER STYLES */
 header {
@@ -173,6 +180,48 @@ footer {
     background-color: var(--sky-blue);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "newsletter"
+    "infoFooter";
+}
+
+#newsletter {
+    grid-area: newsletter;
+}
+
+#newsletter form {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#infoFooter {
+    grid-area: infoFooter;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". basicInfo secondNav legal. "
+    ". . socialLinks . .";
+}
+
+#basicInfo {
+    grid-area: basicInfo;
+}
+
+#secondNav {
+    grid-area: secondNav;
+}
+
+#legal {
+    grid-area: legal;
+}
+
+#socialLinks {
+    grid-area: socialLinks;
 }
 
 /* CLASSES */
