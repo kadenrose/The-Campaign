@@ -165,7 +165,7 @@ nav .thisIsAHeading a {
 }
 
 /* MAIN STYLES */
-main {
+#mainIndex {
     grid-area: main;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -173,9 +173,35 @@ main {
 }
 
 #nextEvent {
-    background-color: var(--deep-red);
-    color: var(--cool-blue-gray);
     grid-area: nextEvent;
+
+    background-color: url("assets/images/AdobeStock_1220609034.jpeg"); /*  TODO IMAGE NOT WORKING AT ALL BRUH  */
+    color: var(--background-1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 1rem;
+    position: relative;
+}
+
+#nextEventInfo {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    font-size: 1.5rem;
+}
+
+#nextEventInfo p {
+    padding: 0.7rem 0;
+}
+
+#nextEventInfo button {
+    font-size: 3rem;
 }
 
 #donateIndex {
@@ -205,6 +231,77 @@ main {
 #donateIndex input, #donateIndex select {
     font-size: 1.5rem;
 }
+
+#mainAbout {
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutMe {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    grid-template-areas: 
+    "aboutMeImage headingAboutMeSection"
+    "aboutMeImage firstParaAboutMe"
+    "aboutMeImage secondParaAboutMe";
+    gap: 1rem;
+    padding: 2rem;
+}
+
+#aboutMe h2 {
+    grid-area: headingAboutMeSection;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#aboutMe img {
+    grid-area: aboutMeImage;
+}
+
+#aboutMarkFirstP {
+    grid-area: firstParaAboutMe
+}
+
+#aboutMarkSecondP {
+    grid-area: secondParaAboutMe;
+}
+
+#aboutMarkFirstP, #aboutMarkSecondP {
+    font-size: 2.5rem;
+}
+
+#issues {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+#issues h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#issues ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#issues h3 {
+    padding-bottom: 1rem;
+    text-decoration: underline;
+    font-size: 2.6rem;
+}
+
+#issues li {
+    background-color: var(--background-2);
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
+
 
 /* FOOTER STYLES */
 footer {
