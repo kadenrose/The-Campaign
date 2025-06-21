@@ -223,7 +223,7 @@ nav .thisIsAHeading a {
     font-size: 2rem;
 }
 
-#radioDonateIndex fieldset {
+fieldset {
     border: 2px solid /*  TODO ADD A BORDER COLOR HERE */;
     border-radius: 5px;
     padding: 1.5rem;
@@ -231,7 +231,7 @@ nav .thisIsAHeading a {
     text-align: center;
 }
 
-#donateIndex input, #donateIndex select {
+#donateIndex input, #donateIndex select, #mainInvolved input, #mainInvolved select{
     font-size: 1.5rem;
 }
 
@@ -428,6 +428,35 @@ nav .thisIsAHeading a {
 
 /* INVOLVED PAGE */
 
+#mainInvolved {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#mainInvolved h2 {
+    font-size: 3rem ;
+}
+
+#volunteerForm, #donate-involved {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+#mainInvolved form {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#donate-involved p {
+    /* text-align: center; */
+    font-size: 1.4rem;
+}
+
 /* FOOTER STYLES */
 footer {
     grid-area: footer;
@@ -447,6 +476,9 @@ footer {
 
 #newsletter {
     grid-area: newsletter;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1rem;
 }
 
 #newsletter form {

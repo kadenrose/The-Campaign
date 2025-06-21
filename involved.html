@@ -48,27 +48,64 @@
     </nav>
     <main id="mainInvolved">
         <section id="volunteerForm">
-            <h2>Volunteer</h2>
+            <h2>Volunteer for Mark Hampton</h2>
             <form>
-                <section id="fullNameVolunteer">
+                <div>
                     <label for="firstNameV">First Name</label>
                     <input class="tilted-input" type="text" id="firstNameV" name="firstNameV">
-
+                </div>
+                <div>
                     <label for="lastNameV">Last Name</label>
                     <input class="tilted-input" type="text" id="lastNameV" name="lastNameV">
-                </section>
+                </div>
 
-                <label for="emailV">Email</label>
-                <input class="tilted-input" type="email" id="emailV" name="emailV">
+                <div>
+                    <label for="emailV">Email</label>
+                    <input class="tilted-input" type="email" id="emailV" name="emailV">
+                </div>
 
-                <label for="telV">Phone Number</label>
-                <input class="tilted-input" type="tel" id="telV" name="telV">
+                <div>
+                    <label for="telV">Phone Number</label>
+                    <input class="tilted-input" type="tel" id="telV" name="telV">
+                </div>
+
+                <div>
+                    <input type="submit" value="Volunteer" class="tilted-input">
+                </div>
             </form>
         </section>
         <section id="donate-involved">
             <h2>Donate Now</h2>
+            <p>Make a tax-deductible contribution today!</p>
             <form>
+                <section id="donateInvolvedName">
+                    <label for="donateInvolvedLegalName">Full Legal Name</label>
+                    <input class="tilted-input" id="donateInvolvedLegalName" name="donateInvolvedLegalName" type="text">
+                </section>
+                <section id="radioDonateInvolved">
+                    <fieldset>
+                        <input id="monthlyInvolved" type="radio" name="donationFrequencyInvolved" value="monthly" checked>
+                        <label for="monthlyInvolved">Monthly</label>
 
+                        <input id="one-timeInvolved" type="radio" name="donationFrequencyInvolved" value="one-time">
+                        <label for="one-timeInvolved" class="noWrap">One-Time</label>
+                    </fieldset>
+                </section>
+                <section id="moneyInvolved">
+                    <label for="donationAmountInvolved">Desired Amount</label><br>
+                    <select class="tilted-input" id="donationAmountInvolved" name="donationAmountInvolved">
+                        <option value="null">Choose Amount</option>
+                        <option value="10">$10</option>
+                        <option value="50">$50</option>
+                        <option value="100">$100</option>
+                        <option value="250">$250</option>
+                        <option value="500">$500</option>
+                        <option value="other">Other</option>
+                    </select>
+                </section>
+                <section>
+                    <input class="tilted-input" type="submit" value="Pay" id="involvedDonateSubmit">
+                </section>
             </form>
         </section>
     </main>
