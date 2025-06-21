@@ -165,6 +165,9 @@ nav .thisIsAHeading a {
 }
 
 /* MAIN STYLES */
+
+/* INDEX PAGE */
+
 #mainIndex {
     grid-area: main;
     display: grid;
@@ -231,6 +234,8 @@ nav .thisIsAHeading a {
 #donateIndex input, #donateIndex select {
     font-size: 1.5rem;
 }
+
+/* ABOUT PAGE */
 
 #mainAbout {
     display: flex;
@@ -301,7 +306,96 @@ nav .thisIsAHeading a {
     font-size: 2rem;
 }
 
+/* EVENTS PAGE */
 
+#mainEvents {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+#mainEvents li {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#coffeeContainer {
+    display: grid;
+    grid-template-areas: "coffee coffee-button";
+}
+
+#coffeeDateEvent {
+    grid-area: coffee;
+}
+
+#buttonContainer1 {
+    grid-area: coffee-button;
+}
+
+#debateContainer {
+    display: grid;
+    grid-template-areas: "debate debate-button";
+}
+
+#theDebateEvent {
+    grid-area: debate;
+}
+
+#buttonContainer2 {
+    grid-area: debate-button;
+}
+
+#townHallContainer {
+    display: grid;
+    grid-template-areas: "town-hall town-hall-button";
+}
+
+#townHallEvent {
+    grid-area: town-hall;
+}
+
+#buttonContainer3 {
+    grid-area: town-hall-button;
+}
+
+#meetGreetContainer {
+    display: grid;
+    grid-template-areas: "meet-greet meet-greet-button";
+}
+
+#meetGreetEvent {
+    grid-area: meet-greet;
+}
+
+#buttonContainer4 {
+    grid-area: meet-greet-button;
+}
+
+#rallyContainer {
+    display: grid;
+    grid-template-areas: "rally rally-button";
+}
+
+#rallyEvent {
+    grid-area: rally;
+}
+
+#buttonContainer5 {
+    grid-area: rally-button;
+}
+
+#driveContainer {
+    display: grid;
+    grid-template-areas: "drive drive-button";
+}
+
+#theDriveEvent {
+    grid-area: drive;
+}
+
+#buttonContainer6 {
+    grid-area: drive-button;
+}
 
 /* FOOTER STYLES */
 footer {
