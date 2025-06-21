@@ -91,7 +91,7 @@ button, input, select {
 }
 
 button {
-    background-color: var(--deep-red);
+    /* background-color: var(--deep-red); */
 }
 
 button:hover {
@@ -314,13 +314,37 @@ nav .thisIsAHeading a {
     padding: 1rem;
     gap: 1rem;
 }
+
 #mainEvents li {
     margin: 1rem;
     padding: 1rem;
+    
+    background-color: rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#mainEvents h2 {
+    font-size: 3rem;
+}
+
+#mainEvents h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#mainEvents p {
+    font-size: 1.8rem;
+    max-width: 75ch;
+}
+
+#mainEvents button {
+    font-size: 2rem;
 }
 
 #coffeeContainer {
     display: grid;
+    grid-template-columns: 1fr 0.15fr;
     grid-template-areas: "coffee coffee-button";
 }
 
@@ -334,6 +358,7 @@ nav .thisIsAHeading a {
 
 #debateContainer {
     display: grid;
+    grid-template-columns: 1fr 0.15fr;
     grid-template-areas: "debate debate-button";
 }
 
@@ -347,6 +372,7 @@ nav .thisIsAHeading a {
 
 #townHallContainer {
     display: grid;
+    grid-template-columns: 1fr 0.15fr;
     grid-template-areas: "town-hall town-hall-button";
 }
 
@@ -360,6 +386,7 @@ nav .thisIsAHeading a {
 
 #meetGreetContainer {
     display: grid;
+    grid-template-columns: 1fr 0.15fr;
     grid-template-areas: "meet-greet meet-greet-button";
 }
 
@@ -373,6 +400,7 @@ nav .thisIsAHeading a {
 
 #rallyContainer {
     display: grid;
+    grid-template-columns: 1fr 0.15fr;
     grid-template-areas: "rally rally-button";
 }
 
@@ -386,6 +414,7 @@ nav .thisIsAHeading a {
 
 #driveContainer {
     display: grid;
+    grid-template-columns: 1fr 0.15fr;
     grid-template-areas: "drive drive-button";
 }
 
@@ -396,6 +425,8 @@ nav .thisIsAHeading a {
 #buttonContainer6 {
     grid-area: drive-button;
 }
+
+/* INVOLVED PAGE */
 
 /* FOOTER STYLES */
 footer {
@@ -530,4 +561,5 @@ footer input {
 .bolded {
     font-weight: bold;
 }
+
 /* MEDIA QUERIES */
