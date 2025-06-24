@@ -70,9 +70,10 @@
                 </div>
 
                 <div>
-                    <input type="submit" value="Volunteer" class="tilted-input">
+                    <input type="submit" value="Volunteer" class="tilted-input" id="submitV">
                 </div>
             </form>
+            <div id="boxOfErrors"></div>
         </section>
         <section id="donate-involved">
             <h2>Donate Now</h2>
@@ -82,6 +83,7 @@
                     <label for="donateInvolvedLegalName">Full Legal Name</label>
                     <input class="tilted-input" id="donateInvolvedLegalName" name="donateInvolvedLegalName" type="text">
                 </section>
+                <div id="errorMessage61"></div>
                 <section id="radioDonateInvolved">
                     <fieldset>
                         <input id="monthlyInvolved" type="radio" name="donationFrequencyInvolved" value="monthly" checked>
@@ -103,6 +105,7 @@
                         <option value="other">Other</option>
                     </select>
                 </section>
+                <div id="errorMessage67"></div>
                 <section>
                     <input class="tilted-input" type="submit" value="Pay" id="involvedDonateSubmit">
                 </section>
@@ -125,9 +128,10 @@
                     <label for="newsletterTel">Phone Number</label>
                     <input class="tilted-input" id="newsletterTel" name="newsletterTel" type="tel" placeholder="(602) 333-5555">
                 </section>
-                <input class="tilted-input" type="submit" value="Subscribe" id="newsletterSubmit">
+                <input class="tilted-input newsletterSubmission" type="submit" value="Subscribe" id="newsletterSubmitInvolved">
             </form>
         </section>
+        <div id="junkYard"></div>
         <section id="infoFooter">
             <section id="basicInfo">
                 <h3>Contact Information</h3>
@@ -145,7 +149,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="involved.html">Get Involved</a></li>
-                    <li><a href="involved.html/#donate-involved">Donate</a></li> <!-- TODO -->
                 </ul>
             </section>
             <section id="legal">

@@ -90,9 +90,9 @@ button, input, select {
     box-shadow: -1px 1px 1px;
 }
 
-button {
-    /* background-color: var(--deep-red); */
-}
+/* button {
+    background-color: var(--deep-red);
+} */
 
 button:hover {
     background-color: var(--muted-red);
@@ -229,10 +229,16 @@ fieldset {
     padding: 1.5rem;
     /* TODO ADD A BACKGROUND COLOR HERE */
     text-align: center;
+    min-width: 380px;
 }
 
 #donateIndex input, #donateIndex select, #mainInvolved input, #mainInvolved select{
     font-size: 1.5rem;
+}
+
+#errorMessage1 {
+    color: red;
+    font-size: 1rem;
 }
 
 /* ABOUT PAGE */
@@ -307,6 +313,37 @@ fieldset {
 }
 
 /* EVENTS PAGE */
+
+#countDown {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-2);
+    color: black;
+}
+
+#countDownClock {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+#countDownClock div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-1);
+    padding: 2rem;
+}
+
+#countDownClock p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+
+}
 
 #mainEvents {
     display: flex;
@@ -495,6 +532,14 @@ footer {
     padding-bottom: 1rem;
 }
 
+#junkYard span {
+    padding: 1rem;
+}
+
+#junkYard {
+    padding: 1rem;
+}
+
 #infoFooter {
     grid-area: infoFooter;
     padding: 2rem;
@@ -592,6 +637,12 @@ footer input {
 
 .bolded {
     font-weight: bold;
+}
+
+/* JS CLASSES */
+
+.error {
+    border: 3px solid red;
 }
 
 /* MEDIA QUERIES */

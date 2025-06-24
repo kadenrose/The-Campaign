@@ -22,7 +22,7 @@
     <meta name="og:type" content="website">
     <meta name="og:site_name" content="The Campaign">
 
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
     <link rel="icon" type="image/png" sizes="25px" href="assets/icons/office.png">
     <link rel="stylesheet" href="styles.css">
     <meta name="license" content="All Rights reserved 2025 | Kaden Rose ">
@@ -31,8 +31,13 @@
     <header>
         <h1 class="hidden">Mark Hampton</h1>
         <section id="countDown">
-            <div> <!-- TODO --> </div>
-            <p> <!-- TODO --> </p>
+            <h2>Countdown to Election Night</h2>
+            <div id="countDownClock">
+                <div class="tilted-input"><span id="days">00</span><p>Days</p></div>
+                <div class="tilted-input"><span id="hours">00</span><p>Hours</p></div>
+                <div class="tilted-input"><span id="minutes">00</span><p>Minutes</p></div>
+                <div class="tilted-input"><span id="seconds">00</span><p>Seconds</p></div>
+            </div>
         </section>
     </header>
     <nav>
@@ -133,9 +138,10 @@
                     <label for="newsletterTel">Phone Number</label>
                     <input class="tilted-input" id="newsletterTel" name="newsletterTel" type="tel" placeholder="(602) 333-5555">
                 </section>
-                <input class="tilted-input" type="submit" value="Subscribe" id="newsletterSubmit">
+                <input class="tilted-input newsletterSubmission" type="submit" value="Subscribe" id="newsletterSubmitEvents">
             </form>
         </section>
+        <div id="junkYard"></div>
         <section id="infoFooter">
             <section id="basicInfo">
                 <h3>Contact Information</h3>
@@ -153,7 +159,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="involved.html">Get Involved</a></li>
-                    <li><a href="involved.html/#donate-involved">Donate</a></li> <!-- TODO -->
                 </ul>
             </section>
             <section id="legal">
