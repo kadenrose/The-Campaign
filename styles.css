@@ -1,6 +1,7 @@
 /* STYLESHEET WRITTEN BY KADEN ROSE ALL RIGHTS RESERVED 2025 */
 
 /* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&display=swap');
 
 /* CSS RESET  */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -62,8 +63,8 @@ table {
     --cool-blue-gray: #0c679c;
     --font-color1: #fff;
     
-    --text-content: 'Barlow', sans-serif;
-    --headers-hero-etc: 'Oswald', serif;
+    --text-content: 'Montserrat', sans-serif;
+    --headers-hero-etc: 'Oxanium', serif;
 }
 
 /* GLOBAL STYLES */
@@ -154,7 +155,7 @@ nav ul {
 }
 
 nav li {
-    padding: 1rem 1.3rem;
+    padding: 1.6rem 1.3rem;
     font-family: var(--headers-hero-etc);
 }
 
@@ -186,7 +187,7 @@ nav .thisIsAHeading {
 }
 
 nav .thisIsAHeading a {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 /* class for current page*/
