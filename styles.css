@@ -53,13 +53,14 @@ table {
 
 /* ROOT VARIABLES */
 :root {
-    --background-1: #FAFAFA;
+    --background-1: #fff;
     --background-2: #F1F1F1;
 
     --deep-red: rgb(171, 0, 34);
-    --muted-red: #B94747;
-    --sky-blue: #A4C8E1;
-    --cool-blue-gray: #C8DDE8;
+    --muted-red: #B31942;
+    --sky-blue: #0a3161;
+    --cool-blue-gray: #0c679c;
+    --font-color1: #fff;
     
     --text-content: 'Barlow', sans-serif;
     --headers-hero-etc: 'Oswald', serif;
@@ -90,13 +91,38 @@ button, input, select {
     box-shadow: -1px 1px 1px;
 }
 
-/* button {
-    background-color: var(--deep-red);
-} */
+button {
+    background-color: var(--cool-blue-gray);
+    padding: 0.25rem;
+    color: var(--font-color1);
+    transition: all 0.5s ease;
+}
+
+#nextEventInfo button {
+    background-color: var(--sky-blue);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+#nextEventInfo button:hover {
+    background-color: var(--cool-blue-gray);
+    cursor: pointer;
+}
 
 button:hover {
     background-color: var(--muted-red);
     cursor: pointer;
+}
+
+.btn {
+    background-color: var(--cool-blue-gray);
+    color: var(--font-color1);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--muted-red);
 }
 
 h2 {
@@ -133,7 +159,7 @@ nav li {
 }
 
 nav a {
-    color: #000000;
+    color: var(--font-color1);
     text-decoration: none;
     font-size: 1.5rem;
 }
@@ -144,11 +170,15 @@ nav button {
 
 nav a:visited {
     text-decoration: none;
-    color: #000000;
+    color: var(--font-color1);
+}
+
+nav li.navItem {
+    transition: all 0.5s ease;
 }
 
 nav li.navItem:hover {
-    background-color: var(--cool-blue-gray);
+    background-color: var(--muted-red);
 }
 
 nav .thisIsAHeading {
@@ -171,7 +201,7 @@ nav .thisIsAHeading a {
 #mainIndex {
     grid-area: main;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 2fr;
     grid-template-areas: "nextEvent donateIndex";
 }
 
@@ -179,7 +209,7 @@ nav .thisIsAHeading a {
     grid-area: nextEvent;
 
     background-color: url("assets/images/AdobeStock_1220609034.jpeg"); /*  TODO IMAGE NOT WORKING AT ALL BRUH  */
-    color: var(--background-1);
+    color: var(--font-color1);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -189,7 +219,7 @@ nav .thisIsAHeading a {
 
 #nextEventInfo {
     max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--sky-blue);
     padding: 2rem;
     border-radius: 8px;
     margin: auto;
@@ -214,6 +244,8 @@ nav .thisIsAHeading a {
     grid-template-columns: 1fr;
     grid-template-rows: 0.25fr 0.25fr 4fr;
     text-align: center;
+    background-color: var(--sky-blue);
+    color: var(--font-color1);
 }
 
 #donateIndex form {
@@ -224,10 +256,10 @@ nav .thisIsAHeading a {
 }
 
 fieldset {
-    border: 2px solid /*  TODO ADD A BORDER COLOR HERE */;
+    border: 2px solid var(--font-color1);
     border-radius: 5px;
     padding: 1.5rem;
-    /* TODO ADD A BACKGROUND COLOR HERE */
+    background-color: var(--sky-blue);
     text-align: center;
     min-width: 380px;
 }
@@ -236,9 +268,11 @@ fieldset {
     font-size: 1.5rem;
 }
 
-#errorMessage1 {
+#errorMessage1, #errorMessage2, #errorMessage67, #errorMessage61 {
     color: red;
-    font-size: 1rem;
+    font-size: 2rem;
+    background-color: var(--sky-blue);
+    border-radius: 8px;
 }
 
 /* ABOUT PAGE */
@@ -246,6 +280,10 @@ fieldset {
 #mainAbout {
     display: flex;
     flex-direction: column;
+}
+
+#abtHeader {
+    background-color: var(--sky-blue);
 }
 
 #aboutMe {
@@ -257,6 +295,8 @@ fieldset {
     "aboutMeImage secondParaAboutMe";
     gap: 1rem;
     padding: 2rem;
+    background-color: var(--sky-blue);
+    color: var(--font-color1);
 }
 
 #aboutMe h2 {
@@ -286,11 +326,13 @@ fieldset {
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
+    background-color: var(--sky-blue);
 }
 
 #issues h2 {
     font-size: 3rem;
     font-weight: bold;
+    color: var(--font-color1);
 }
 
 #issues ul {
@@ -306,10 +348,18 @@ fieldset {
 }
 
 #issues li {
-    background-color: var(--background-2);
+    background-color: var(--cool-blue-gray);
     padding: 2rem 4rem;
     border-radius: 8px;
     font-size: 2rem;
+    color: var(--font-color1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#issues li:hover {
+    margin: 1rem;
+    padding: 1rem 3rem;
 }
 
 /* EVENTS PAGE */
@@ -317,8 +367,8 @@ fieldset {
 #countDown {
     text-align: center;
     padding: 2rem;
-    background-color: var(--background-2);
-    color: black;
+    background-color: var(--muted-red);
+    color: var(--font-color1);
 }
 
 #countDownClock {
@@ -334,8 +384,9 @@ fieldset {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--background-1);
+    background-color: var(--deep-red);
     padding: 2rem;
+    border-radius: 8px;
 }
 
 #countDownClock p {
@@ -350,6 +401,8 @@ fieldset {
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
+    background-color: var(--muted-red);
+    color: var(--font-color1);
 }
 
 #mainEvents li {
@@ -359,6 +412,13 @@ fieldset {
     background-color: rgba(0, 0, 0, 0.18);
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#mainEvents li:hover {
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 1.5rem;
 }
 
 #mainEvents h2 {
@@ -465,9 +525,15 @@ fieldset {
 
 /* INVOLVED PAGE */
 
+#headerInvolved {
+    background-color: var(--sky-blue);
+}
+
 #mainInvolved {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: var(--sky-blue);
+    color: var(--font-color1);
 }
 
 #mainInvolved h2 {
@@ -475,8 +541,11 @@ fieldset {
 }
 
 #volunteerForm, #donate-involved {
-    border: 1px solid black;
     padding: 1rem;
+}
+
+#donate-involved {
+    border-left: 1px solid var(--background-1);
 }
 
 #mainInvolved form {
@@ -494,6 +563,15 @@ fieldset {
     font-size: 1.4rem;
 }
 
+#fieldsetInvolved {
+    background-color: var(--sky-blue);
+    border: 1px solid var(--background-1);
+}
+
+#boxOfErrors {
+    text-align: center;
+}
+
 /* FOOTER STYLES */
 footer {
     grid-area: footer;
@@ -501,6 +579,7 @@ footer {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 1rem;
+    color: var(--font-color1);
     
     display: grid;
     grid-template-columns: 1fr;
@@ -513,7 +592,7 @@ footer {
 
 #newsletter {
     grid-area: newsletter;
-    border: 1px solid black;
+    border: 1px solid var(--background-1);
     border-radius: 8px;
     padding: 1rem;
 }
@@ -560,16 +639,24 @@ footer {
     gap: 1rem;
 }
 
+#basicInfo a {
+    color: var(--background-2)
+}
+
+#basicInfo a:visited {
+    color: var(--background-2)
+}
+
 #secondNav {
     grid-area: secondNav;
 }
 
 #secondNav a {
-    color: black;
+    color: var(--font-color1);
 }
 
 #secondNav a:visited {
-    color: black;
+    color: var(--font-color1);
 }
 
 #secondNav ul {
@@ -585,13 +672,13 @@ footer {
 }
 
 #legal a {
-    color: black; /* TODO UPDATE COLOR*/
+    color: var(--muted-red); 
     text-decoration: none;
     font-weight: bold;
 }
 
 #legal a:visited {
-    color: black; /* TODO UPDATE COLOR*/
+    color: var(--muted-red);
 }
 
 #socialLinks {
