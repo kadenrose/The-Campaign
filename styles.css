@@ -209,7 +209,7 @@ nav .thisIsAHeading a {
 #nextEvent {
     grid-area: nextEvent;
 
-    background-color: url("assets/images/AdobeStock_1220609034.jpeg"); /*  TODO IMAGE NOT WORKING AT ALL BRUH  */
+    background-image: url("assets/images/AdobeStock_1220609034.jpeg");
     color: var(--font-color1);
     background-size: cover;
     background-position: center;
@@ -270,10 +270,11 @@ fieldset {
 }
 
 #errorMessage1, #errorMessage2, #errorMessage67, #errorMessage61 {
-    color: red;
-    font-size: 2rem;
+    color: var(--font-color1);
+    font-size: 1.5rem;
     background-color: var(--sky-blue);
     border-radius: 8px;
+    height: 3rem;
 }
 
 /* ABOUT PAGE */
@@ -289,11 +290,11 @@ fieldset {
 
 #aboutMe {
     display: grid;
-    grid-template-columns: 1.2fr 2fr;
+    grid-template-columns: 0.6fr 1fr 1fr;
     grid-template-areas: 
-    "aboutMeImage headingAboutMeSection"
-    "aboutMeImage firstParaAboutMe"
-    "aboutMeImage secondParaAboutMe";
+    "aboutMeImage headingAboutMeSection headingAboutMeSection"
+    "aboutMeImage firstParaAboutMe secondParaAboutMe"
+    "aboutMeImage firstParaAboutMe secondParaAboutMe";
     gap: 1rem;
     padding: 2rem;
     background-color: var(--sky-blue);
@@ -319,7 +320,7 @@ fieldset {
 }
 
 #aboutMarkFirstP, #aboutMarkSecondP {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #issues {
@@ -402,7 +403,7 @@ fieldset {
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    background-color: var(--muted-red);
+    background-color: var(--sky-blue);
     color: var(--font-color1);
 }
 
@@ -417,7 +418,6 @@ fieldset {
 }
 
 #mainEvents li:hover {
-    cursor: pointer;
     padding: 0.5rem;
     margin: 1.5rem;
 }
@@ -542,7 +542,7 @@ fieldset {
 }
 
 #volunteerForm, #donate-involved {
-    padding: 1rem;
+    padding: 2.5rem;
 }
 
 #donate-involved {
@@ -571,7 +571,14 @@ fieldset {
 
 #boxOfErrors {
     text-align: center;
+    height: 8rem;
 }
+
+#boxOfErrors li {
+    padding: 0.5rem;
+}
+
+
 
 /* FOOTER STYLES */
 footer {
@@ -593,7 +600,6 @@ footer {
 
 #newsletter {
     grid-area: newsletter;
-    border: 1px solid var(--background-1);
     border-radius: 8px;
     padding: 1rem;
 }
@@ -612,12 +618,14 @@ footer {
     padding-bottom: 1rem;
 }
 
-#junkYard span {
-    padding: 1rem;
+#junkYard li {
+    padding: 0.5rem;
+    /* margin: 2rem 0; */
 }
 
 #junkYard {
     padding: 1rem;
+    height: 5rem;
 }
 
 #infoFooter {
@@ -706,7 +714,9 @@ footer input {
 
 .hero {
     width: 100%;
-    height: auto;
+    height: 950px;
+    object-fit: cover;
+    object-position: top;
 }
 
 
@@ -733,4 +743,57 @@ footer input {
     border: 3px solid red;
 }
 
+.newsletterStartOff {
+    border: 3px solid var(--background-1);
+}
+
 /* MEDIA QUERIES */
+
+/* @media (max-width: 768px) {
+    body {
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "footer";
+        background-color: var(--sky-blue);
+    }
+
+    .hero {
+        width: auto;
+        max-width: 768px;
+        height: auto;
+    }
+
+    #mainIndex {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nextEvent"
+        "donateIndex";
+        max-width: 768px;
+    }
+
+    #nextEvent {
+        max-width: 768px;
+    }
+
+    #newsletter {
+        max-width: 700px;
+    }
+
+    #newsletter form {
+        flex-direction: column;
+    }
+
+    #infoFooter {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "basicInfo"
+        "secondNav"
+        "socialLinks"
+        "legal";
+        max-width: 700px;
+    }
+
+} */
+
