@@ -40,3 +40,7 @@ h1, h2, h3, h4, nav {
     object-fit: cover;
     object-position: top;
 }
+
+#indexDonateSubmit{
+    padding: 0.25rem 2rem;
+}
