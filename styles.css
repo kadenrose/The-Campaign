@@ -30,8 +30,8 @@ h1, h2, h3, h4, nav {
 }
 
 .btn {
-    background-color: var(--muted-red);
-    color: var(--font-color1);
+    background-color: var(--muted-red) !important;
+    color: var(--font-color1) !important;
 }
 
 .hero {

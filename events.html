@@ -1,217 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events Page | The Campaign</title>
-    <meta name="author" content="Kaden Rose">
 
-    <meta name="description" content="Stay informed about Mark Hampton's upcoming campaign events and how important they are.">
-    <meta name="keyword" content="The Campaign, campaign, Mark Hampton, campaign events, political rallies, town hall meetings, volunteer events">
-    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kaden Rose" />
+    <meta
+        name="description"
+        content="Stay informed about Mark Hampton's upcoming campaign events and how important they are."
+    />
+    <meta name="robots" content="index, follow" />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Events Page | The Campaign">
-    <meta name="twitter:description" content="Stay informed about Mark Hampton's upcoming campaign events and how important they are.">
-    <meta name="twitter:site" content="@TheCampaign">
+    <!-- Social -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Events Page | The Campaign" />
+    <meta
+        name="twitter:description"
+        content="Stay informed about Mark Hampton's upcoming campaign events and how important they are."
+    />
 
-    <meta name="og:title" content="Events Page | The Campaign">
-    <meta name="og:description" content="Stay informed about Mark Hampton's upcoming campaign events and how important they are.">
-    <meta name="og:type" content="website">
-    <meta name="og:site_name" content="The Campaign">
+    <meta property="og:title" content="Events Page | The Campaign" />
+    <meta
+      property="og:description"
+      content="Stay informed about Mark Hampton's upcoming campaign events and how important they are."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Campaign" />
 
-    <script src="main.js"></script>
-    <link rel="icon" type="image/png" sizes="25px" href="assets/icons/office.png">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="license" content="All Rights reserved 2025 | Kaden Rose ">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1 class="hidden">Mark Hampton</h1>
-        <section id="countDown">
-            <h2>Countdown to Election Night</h2>
-            <div id="countDownClock">
-                <div class="tilted-input"><span id="days">00</span><p>Days</p></div>
-                <div class="tilted-input"><span id="hours">00</span><p>Hours</p></div>
-                <div class="tilted-input"><span id="minutes">00</span><p>Minutes</p></div>
-                <div class="tilted-input"><span id="seconds">00</span><p>Seconds</p></div>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/office.png"
+    />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body class="bg-light">
+    <!-- Skip Link -->
+    <a href="#mainEvents" class="visually-hidden-focusable skip-link">
+      Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="text-center py-4 bg-white shadow-sm">
+      <h1 class="visually-hidden">Mark Hampton</h1>
+
+      <!-- Countdown -->
+      <section id="countDown" class="container">
+        <h2 class="mb-3">Countdown to Election Night</h2>
+
+        <div
+          id="countDownClock"
+          class="row justify-content-center text-center g-3"
+        >
+          <div class="col-6 col-md-3">
+            <div class="tilted-input p-3 bg-light rounded">
+              <span id="days" class="fs-3 fw-bold">00</span>
+              <p class="mb-0">Days</p>
             </div>
-        </section>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="tilted-input p-3 bg-light rounded">
+              <span id="hours" class="fs-3 fw-bold">00</span>
+              <p class="mb-0">Hours</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="tilted-input p-3 bg-light rounded">
+              <span id="minutes" class="fs-3 fw-bold">00</span>
+              <p class="mb-0">Minutes</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="tilted-input p-3 bg-light rounded">
+              <span id="seconds" class="fs-3 fw-bold">00</span>
+              <p class="mb-0">Seconds</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
-    <nav>
-        <h2 class="hidden">Menu</h2>
-        <div class="thisIsAHeading"><a href="index.html">Mark Hampton</a></div>
-        <ul>
-            <li class="navItem tilted-input"><a href="index.html">Home</a></li>
-            <li class="navItem tilted-input"><a href="about.html">About</a></li>
-            <li class="navItem tilted-input active"><a href="events.html">Events</a></li>
-            <li class="navItem tilted-input"><a href="involved.html">Get Involved</a></li>
-            <li><button id="eventsDonateBtn" class="tilted-input">Donate Now</button></li>
-        </ul>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Mark Hampton</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="events.html"
+                >Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="involved.html">Get Involved</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a href="#donateIndex" class="btn btn-warning">Donate Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <main id="mainEvents">
-        <h2>Upcoming Events</h2>
-        <ul>
-            <li id="coffeeContainer">
-                <div id="coffeeDateEvent">
-                    <h3>Coffee with Mark</h3>
-                    <p>April 14, 2026 - 9:00am</p>
-                    <p>Coffee Rush in Encore Plaza, Gilbert, AZ</p>
-                    <p id="lastParaEvents1">Sit down with Mark Hampton, get to know him and what makes him tick, and find out how he can help you with your challenges.</p>
-                </div>
-                <div id="buttonContainer1">
-                    <button id="coffeeWMarkButton" class="tilted-input">RSVP</button>
-                </div>
-            </li>
-            <li id="debateContainer">
-                <div id="theDebateEvent">
-                    <h3>Candidate Debate</h3>
-                    <p>May 28, 2026 - 7:00pm</p>
-                    <p>Varrado High School Auditorium, Buckeye, AZ</p>
-                    <p id="lastParaEvents2">Mark joins other candidates for a moderated debate on local policy positions, hosted by the Tartesso Community Association.</p>
-                </div>
-                <div id="buttonContainer2">
-                    <button id="debateButton" class="tilted-input">RSVP</button>
-                </div>
-            </li>
-            <li id="townHallContainer">
-                <div id="townHallEvent">
-                    <h3>Neighborhood Safety Town Hall</h3>
-                    <p>June 5, 2026 - 6:30pm</p>
-                    <p>Chandler Public Library, Chandler, AZ</p>
-                    <p id="lastParaEvents3">Mark will host an open forum for discussions for fire code enforcement, neighborhood patrolling, and emergency planning.</p>
-                </div>
-                <div id="buttonContainer3">
-                    <button id="townHallButton" class="tilted-input">RSVP</button>
-                </div>
-            </li>
-            <li id="meetGreetContainer">
-                <div id="meetGreetEvent">
-                    <h3>Community Meet and Greet</h3>
-                    <p>July 18, 2026 - 6:00pm</p>
-                    <p>Tempe Community Center, Tempe, AZ</p>
-                    <p id="lastParaEvents4">Come and say hello to Mark. Ask him questions about his views and what he is fighting for. Refreshments will be provided.</p>
-                </div>
-                <div id="buttonContainer4">
-                    <button id="meetGreetButton" class="tilted-input">RSVP</button>
-                </div>
-            </li>
-            <li id="rallyContainer">
-                <div id="rallyEvent">
-                    <h3>Leadership Rally with Councilwoman Lopez</h3>
-                    <p>August 28, 2026 - 5:30pm</p>
-                    <p>Mesa Civic Lawn, Mesa, AZ</p>
-                    <p id="lastParaEvents5">Join Councilwoman Sophia Lopez, Mark Hampton, and others as they discuss infrastructure reform, small business help, and leadership that hears you. Live music and family friendly booths will be on site.</p>
-                </div>
-                <div id="buttonContainer5">
-                    <button id="rallyButton" class="tilted-input">Get Tickets</button>
-                </div>
-            </li>
-            <li id="driveContainer">
-                <div id="theDriveEvent">
-                    <h3>Kick-Off Drive</h3>
-                    <p>August 30, 2026 - 7:00am</p>
-                    <p>Mark Hampton Campaign HQ, Phoenix, AZ</p>
-                    <p id="lastParaEvents6">Want to get involved? Join others for a short training session, meet the campaign team, and help phone bank, canvas, and spread the word. T-shirts and pizza provided.</p>
-                </div>
-                <div id="buttonContainer6">
-                    <button id="driveButton" class="tilted-input">RSVP</button>
-                </div>
-            </li>
-        </ul>
+
+    <!-- Main -->
+    <main id="mainEvents" class="container my-5">
+      <section class="mb-5">
+        <h2 class="mb-4">Upcoming Events</h2>
+
+        <div class="row g-4">
+          <!-- Event Card -->
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Coffee with Mark</h3>
+                <p class="fw-semibold mb-1">April 14, 2026 – 9:00am</p>
+                <p class="mb-2">Coffee Rush at Encore Plaza, Gilbert, AZ</p>
+                <p>
+                  Sit down with Mark Hampton, get to know him and what makes him
+                  tick.
+                </p>
+                <button id="coffeeWMarkButton" class="btn btn-primary">
+                  RSVP
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Candidate Debate</h3>
+                <p class="fw-semibold mb-1">May 28, 2026 – 7:00pm</p>
+                <p class="mb-2">Verrado High School Auditorium, Buckeye, AZ</p>
+                <p>
+                  Mark joins other candidates for a moderated debate on local
+                  policy.
+                </p>
+                <button id="debateButton" class="btn btn-primary">RSVP</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Neighborhood Safety Town Hall</h3>
+                <p class="fw-semibold mb-1">June 5, 2026 – 6:30pm</p>
+                <p class="mb-2">Chandler Public Library, Chandler, AZ</p>
+                <p>
+                  Open forum discussion on safety, emergency planning, and
+                  patrols.
+                </p>
+                <button id="townHallButton" class="btn btn-primary">
+                  RSVP
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Community Meet & Greet</h3>
+                <p class="fw-semibold mb-1">July 18, 2026 – 6:00pm</p>
+                <p class="mb-2">Tempe Community Center, Tempe, AZ</p>
+                <p>Ask questions, meet the team, and enjoy refreshments.</p>
+                <button id="meetGreetButton" class="btn btn-primary">
+                  RSVP
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Leadership Rally</h3>
+                <p class="fw-semibold mb-1">August 28, 2026 – 5:30pm</p>
+                <p class="mb-2">Mesa Civic Lawn, Mesa, AZ</p>
+                <p>
+                  Infrastructure reform, small business support, and live music.
+                </p>
+                <button id="rallyButton" class="btn btn-primary">
+                  Get Tickets
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Kick-Off Drive</h3>
+                <p class="fw-semibold mb-1">August 30, 2026 – 7:00am</p>
+                <p class="mb-2">Campaign HQ, Phoenix, AZ</p>
+                <p>Training, canvassing, phone banking, and pizza provided.</p>
+                <button id="driveButton" class="btn btn-primary">RSVP</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-        <section id="newsletter" class="newsletterStartOff">
-            <h2>Subscribe to Newsletter</h2>
-            <form>
-                <section id="contactName">
-                    <label for="newsletterFullName">Full Name</label>
-                    <input class="tilted-input" id="newsletterFullName" name="newsletterFullName" type="text" placeholder="First Last">
-                </section>
-                <section id="contactEmail">
-                    <label for="newsletterMail">Email</label>
-                    <input class="tilted-input" id="newsletterMail" name="newsletterMail" type="email" placeholder="example@email.com">
-                </section>
-                <section id="contactTel">
-                    <label for="newsletterTel">Phone Number</label>
-                    <input class="tilted-input" id="newsletterTel" name="newsletterTel" type="tel" placeholder="(602) 333-5555">
-                </section>
-                <input class="tilted-input newsletterSubmission btn" type="submit" value="Subscribe" id="newsletterSubmitEvents">
-            </form>
-            <div id="junkYard"></div>
-        </section>
-        <section id="infoFooter">
-            <section id="basicInfo">
-                <h3>Contact Information</h3>
-                <ul>
-                    <li><a href="mailto:info@markhampton2026.com">info@markhampton2026.com</a></li>
-                    <li>(480) 949-2222</li>
-                    <li>101 W Jackson St<br>
-                        Phoenix, AZ  85003<br>
-                        United States</li>
-                </ul>
-            </section>
-            <section id="secondNav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="involved.html">Get Involved</a></li>
-                </ul>
-            </section>
-            <section id="legal">
-                <ul>
-                    <li>&copy 2025 Mark Hampton for Office</li>
-                    <li class="noWrap">Website written and designed by <a href="https://github.com/kadenrose">Kaden Rose</a></li>
-                    <li><span class="bolded">Disclaimer:</span> This website was created for educational purposes as part of a senior project at Arizona State University. All content is fictitious and does not represent a real political campaign.</li>
-                </ul>
-            </section>
-            <section id="socialLinks">
-                <h3>Social Links</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/"><svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="32"
-    height="32"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="#ffffff"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
->
-    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-    <path d="M16.5 7.5l0 .01" /></svg></a></li>
-                    <li><a href="https://www.facebook.com/"><svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="32"
-    height="32"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="#ffffff"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
->
-    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a></li>
-                    <li><a href="https://www.x.com/"><svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="32"
-    height="32"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="#ffffff"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
->
-    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg></a></li>
-                </ul>
-            </section>
-        </section>
-    </footer>
-</body>
+
+    <!-- Footer (same as Home page) -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+
+      <!-- Newsletter -->
+      <section id="newsletter" class="mb-5">
+        <h2 class="text-center mb-3">Subscribe to Newsletter</h2>
+        <form class="row g-3 justify-content-center">
+          <div class="col-md-4">
+            <label for="newsletterFullName" class="form-label">Full Name</label>
+            <input class="form-control" id="newsletterFullName" name="newsletterFullName" type="text" placeholder="First Last">
+          </div>
+          <div class="col-md-4">
+            <label for="newsletterMail" class="form-label">Email</label>
+            <input class="form-control" id="newsletterMail" name="newsletterMail" type="email" placeholder="example@email.com">
+          </div>
+          <div class="col-md-4">
+            <label for="newsletterTel" class="form-label">Phone Number</label>
+            <input class="form-control" id="newsletterTel" name="newsletterTel" type="tel" placeholder="(602) 333-5555">
+          </div>
+          <div class="col-12 text-center">
+            <input class="btn btn-warning mt-2" type="submit" value="Subscribe" id="newsletterSubmit">
+          </div>
+        </form>
+        <div id="junkYard"></div>
+      </section>
+
+      <hr class="border-light">
+
+      <!-- Footer Info -->
+      <div class="row gy-4">
+        <div class="col-md-3">
+          <h3>Contact Information</h3>
+          <ul class="list-unstyled">
+            <li><a href="mailto:info@markhampton2026.com" class="text-white text-decoration-none">info@markhampton2026.com</a></li>
+            <li>(480) 949-2222</li>
+            <li>101 W Jackson St<br>Phoenix, AZ 85003<br>United States</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h3>Site Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+            <li><a href="events.html" class="text-white text-decoration-none">Events</a></li>
+            <li><a href="involved.html" class="text-white text-decoration-none">Get Involved</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Legal</h3>
+          <ul class="list-unstyled small">
+            <li>&copy; 2025 Mark Hampton for Office</li>
+            <li>Website written and designed by <a href="https://github.com/kadenrose" class="text-white text-decoration-underline">Kaden Rose</a></li>
+            <li><strong>Disclaimer:</strong> This website was created for educational purposes as part of a senior project at Arizona State University. All content is fictitious and does not represent a real political campaign.</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3>Social Links</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://www.instagram.com/" class="text-white">
+              <!-- Instagram SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M16.5 7.5l0 .01"/></svg>
+            </a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/" class="text-white">
+              <!-- Facebook SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"/></svg>
+            </a></li>
+            <li class="list-inline-item"><a href="https://www.x.com/" class="text-white">
+              <!-- X SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
